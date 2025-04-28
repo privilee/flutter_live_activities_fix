@@ -444,6 +444,8 @@ public class LiveActivitiesPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
     queryResult["url"] = components?.url?.absoluteString
     
     urlSchemeSink?.self(queryResult)
+    RedirectComponent.applicationDidOpen(from: url)
+    
     return true
   }
   
